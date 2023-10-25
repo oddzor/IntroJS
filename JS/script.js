@@ -1,6 +1,6 @@
 const button1 = document.getElementById("button__1");
 const button2 = document.getElementById("button__2");
-const button3 = document.getElementById("button__3"); // Her identifiserer de individuelle <button>-elementene for som et JS element eller blir brukendes //
+const button3 = document.getElementById("button__3"); // Her identifiserer de individuelle <button>-elementene for som et JS element? //
 const button4 = document.getElementById("button__4");
 const button5 = document.getElementById("button__5");
 const button6 = document.getElementById("button__6");
