@@ -1,6 +1,6 @@
 const button1 = document.getElementById("button__1");
 const button2 = document.getElementById("button__2");
-const button3 = document.getElementById("button__3"); // Her identifiserer de individuelle <button>-elementene for å kjøre en JS funksjon //
+const button3 = document.getElementById("button__3"); // Her identifiserer de individuelle <button>-elementene for som et JS element eller blir brukendes //
 const button4 = document.getElementById("button__4");
 const button5 = document.getElementById("button__5");
 const button6 = document.getElementById("button__6");
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var resultElement = document.getElementById("result__1"); // Her identifiseres <p id="result"> som target for resultElement //
 
   button1.addEventListener("click", function () {
-    // Denne linjen kjører koden på button click //
+    // Denne linjen kjører koden på button click via en "listener" som søker etter handlingen jeg har lagt til etter ( //
     const number1 = 10;
     const number2 = 20;
     const number3 = 5;
@@ -86,8 +86,9 @@ document.addEventListener("DOMContentLoaded", function () {
     var age = prompt("Alder?");
     var question = prompt("Rate my JavaScript");
 
-    if (name !== null && age !== null && question !== null) {
-      // Denne linjen skal returnere en "feilmelding" dersom noen av promptene blir kansellert (null) //
+    if (name === null || age === null || question === null) {
+      // Hvis noen av feltene ikke blir fylt inn. === for å vise at feltet er like null aka tom. || som OR imellom feltene //
+      // Denne linjen skal returnere en "feilmelding" dersom noen av promptene blir latt stå tomme (null) //
 
       resultElement.textContent = `Navn: ${name} Alder: ${age} Javascript rating: ${question}`;
     } else {
@@ -110,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var ord2 = prompt("Ord 2");
     var ord3 = prompt("Ord 3");
 
-    if (ord1 !== null && ord2 !== null && ord3 !== null) {
+    if (ord1 === null || ord2 === null || ord3 === null) {
       resultElement.textContent = `${ord1} ${ord2} ${ord3}`;
     } else {
       resultElement.textContent = "Dette var tydeligvis vanskelig";
