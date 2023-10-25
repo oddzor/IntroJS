@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var question = prompt("Rate my JavaScript");
 
     if (name !== null && age !== null && question !== null) {
-      // Denne linjen skal returnere en "feilmelding" dersom noen av tekstfeltene ikke blir fylt inn (null) //
+      // Denne linjen skal returnere en "feilmelding" dersom noen av promptene blir kansellert (null) //
 
       resultElement.textContent = `Navn: ${name} Alder: ${age} Javascript rating: ${question}`;
     } else {
