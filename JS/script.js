@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var ord2 = prompt("Ord 2");
     var ord3 = prompt("Ord 3");
 
-    if (ord1 !== null || ord2 !== null || ord3 !== null) {
+    if (ord1 !== null && ord2 !== null && ord3 !== null) {
       resultElement.textContent = `${ord1} ${ord2} ${ord3}`;
     } else {
       resultElement.textContent = "Dette var tydeligvis vanskelig";
