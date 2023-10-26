@@ -86,9 +86,9 @@ document.addEventListener("DOMContentLoaded", function () {
     var age = prompt("Alder?");
     var question = prompt("Rate my JavaScript");
 
-    if (name === null || age === null || question === null) {
+    if (name !== null && age !== null && question !== null) {
       // Hvis noen av feltene ikke blir fylt inn. === for å vise at feltet er like null aka tom. || som OR imellom feltene //
-      // Denne linjen skal returnere en "feilmelding" dersom noen av promptene blir latt stå tomme (null) //
+      // Denne linjen skal returnere en "feilmelding" dersom noen av promptene blir latt stå tomme (null), men fikk ikke det helt til å funke som jeg ville (den returnerer bare feilmeldingen dersom et av feltene blir kansellert) //
 
       resultElement.textContent = `Navn: ${name} Alder: ${age} Javascript rating: ${question}`;
     } else {
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var ord2 = prompt("Ord 2");
     var ord3 = prompt("Ord 3");
 
-    if (ord1 === null || ord2 === null || ord3 === null) {
+    if (ord1 !== null || ord2 !== null || ord3 !== null) {
       resultElement.textContent = `${ord1} ${ord2} ${ord3}`;
     } else {
       resultElement.textContent = "Dette var tydeligvis vanskelig";
