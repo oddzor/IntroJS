@@ -4,6 +4,7 @@ const button3 = document.getElementById("button__3"); // Her identifiserer de in
 const button4 = document.getElementById("button__4");
 const button5 = document.getElementById("button__5");
 const button6 = document.getElementById("button__6");
+const button6 = document.getElementById("button__7");
 
 // Oppgave 1 //
 
@@ -86,8 +87,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var age = prompt("Alder?");
     var question = prompt("Rate my JavaScript");
 
-    if (name !== null && age !== null && question !== null) {
-      // Hvis noen av feltene ikke blir fylt inn. === for å vise at feltet er like null aka tom. || som OR imellom feltene //
+    if (name == null || age == null || question == null) {
+      // Hvis noen av feltene ikke blir fylt inn. === for å vise at feltet er like null aka tom. //
       // Denne linjen skal returnere en "feilmelding" dersom noen av promptene blir latt stå tomme (null), men fikk ikke det helt til å funke som jeg ville (den returnerer bare feilmeldingen dersom et av feltene blir kansellert) //
 
       resultElement.textContent = `Navn: ${name} Alder: ${age} Javascript rating: ${question}`;
@@ -111,10 +112,61 @@ document.addEventListener("DOMContentLoaded", function () {
     var ord2 = prompt("Ord 2");
     var ord3 = prompt("Ord 3");
 
-    if (ord1 !== null && ord2 !== null && ord3 !== null) {
+    if (ord1 == null || ord2 == null || ord3 == null) {
       resultElement.textContent = `${ord1} ${ord2} ${ord3}`;
     } else {
       resultElement.textContent = "Dette var tydeligvis vanskelig";
     }
   });
 });
+
+// Oppgave 7 //
+
+var day = "Mandag";
+
+switch (day) {
+  case "Mandag":
+    console.log("Ukens første dag");
+    break;
+
+  case "Tirsdag":
+    console.log("En dag nærmere helgen");
+    break;
+
+  case "Onsdag":
+    console.log("Midt i uken");
+    break;
+
+  case "Torsdag":
+    console.log("Bare en dag til fredag");
+    break;
+
+  case "Fredag":
+    console.log("Snart helg!");
+    break;
+
+  case "Lørdag":
+  case "Søndag":
+    console.log("Det er endelig helg");
+    break;
+  default:
+    console.log("Dette er ikke en gyldig dag");
+}
+
+var day = "Mandag";
+
+if (day === "Mandag") {
+  console.log("Ukens første dag");
+} else if (day === "Tirsdag") {
+  console.log("En dag nærmere helgen");
+} else if (day === "Onsdag") {
+  console.log("Midt i uken");
+} else if (day === "Torsdag") {
+  console.log("Bare en dag til fredag");
+} else if (day === "Fredag") {
+  console.log("Snart helg!");
+} else if (day === "Lørdag" || day === "Søndag") {
+  console.log("Det er endelig helg");
+} else {
+  console.log("Dette er ikke en gyldig dag");
+}
