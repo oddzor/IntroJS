@@ -4,7 +4,7 @@ const button3 = document.getElementById("button__3"); // Her identifiserer de in
 const button4 = document.getElementById("button__4");
 const button5 = document.getElementById("button__5");
 const button6 = document.getElementById("button__6");
-const button6 = document.getElementById("button__7");
+const button7 = document.getElementById("button__7");
 
 // Oppgave 1 //
 
@@ -122,38 +122,48 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Oppgave 7 //
 
-var day = "Mandag";
+var textOutput = document.getElementById("result__6");
 
-switch (day) {
-  case "Mandag":
-    console.log("Ukens første dag");
+var day = prompt("Hvilken dag er det idag?")
+
+var sentence = "Ukens første dag";
+
+switch (day.toLowerCase()) {
+  case "mandag":
+    console.log(sentence);
+    textOutput.innerHTML = sentence;
     break;
 
-  case "Tirsdag":
+  case "tirsdag":
     console.log("En dag nærmere helgen");
+    textOutput.innerHTML = sentence;
     break;
 
-  case "Onsdag":
+  case "onsdag":
     console.log("Midt i uken");
+    textOutput.innerHTML = sentence;
     break;
 
-  case "Torsdag":
+  case "torsdag":
     console.log("Bare en dag til fredag");
+    textOutput.innerHTML = sentence;
     break;
 
-  case "Fredag":
-    console.log("Snart helg!");
+  case "fredag":
+    console.log("Snart helg");
+    textOutput.innerHTML = sentence;
     break;
 
-  case "Lørdag":
-  case "Søndag":
+  case "lørdag":
+  case "søndag":
     console.log("Det er endelig helg");
+    textOutput.innerHTML = sentence;
     break;
   default:
     console.log("Dette er ikke en gyldig dag");
 }
 
-var day = "Mandag";
+var day = "Torsdag";
 
 if (day === "Mandag") {
   console.log("Ukens første dag");
@@ -169,4 +179,16 @@ if (day === "Mandag") {
   console.log("Det er endelig helg");
 } else {
   console.log("Dette er ikke en gyldig dag");
+}
+
+// Skriv en kode som sjekker om et tall x er større enn 10. Hvis det er det, skal det skrives ut "Tallet er større enn 10". //
+
+var hovedTall = 15;
+
+if (hovedTall > 10) {
+  console.log("Tallet er større enn 10");
+} else if (hovedTall < 10) {
+  console.log("Tallet er mindre enn 10");
+} else if (hovedTall === 10) {
+  console.log("Tallene er like");
 }
