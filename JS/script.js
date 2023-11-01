@@ -122,64 +122,47 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Oppgave 7 //
 
-var textOutput = document.getElementById("result__6");
-
-var day = prompt("Hvilken dag er det idag?")
+var mandag = "mandag"
 
 var sentence = "Ukens første dag";
 
-switch (day.toLowerCase()) {
+switch (day) {
   case "mandag":
     console.log(sentence);
-    textOutput.innerHTML = sentence;
     break;
 
   case "tirsdag":
     console.log("En dag nærmere helgen");
-    textOutput.innerHTML = sentence;
     break;
 
   case "onsdag":
     console.log("Midt i uken");
-    textOutput.innerHTML = sentence;
     break;
 
   case "torsdag":
     console.log("Bare en dag til fredag");
-    textOutput.innerHTML = sentence;
     break;
 
   case "fredag":
     console.log("Snart helg");
-    textOutput.innerHTML = sentence;
     break;
 
   case "lørdag":
   case "søndag":
     console.log("Det er endelig helg");
-    textOutput.innerHTML = sentence;
     break;
   default:
     console.log("Dette er ikke en gyldig dag");
 }
 
-var day = "Torsdag";
 
-if (day === "Mandag") {
-  console.log("Ukens første dag");
-} else if (day === "Tirsdag") {
-  console.log("En dag nærmere helgen");
-} else if (day === "Onsdag") {
-  console.log("Midt i uken");
-} else if (day === "Torsdag") {
-  console.log("Bare en dag til fredag");
-} else if (day === "Fredag") {
-  console.log("Snart helg!");
-} else if (day === "Lørdag" || day === "Søndag") {
-  console.log("Det er endelig helg");
-} else {
-  console.log("Dette er ikke en gyldig dag");
-}
+// Klasserom //
+
+
+
+
+//
+
 
 // Skriv en kode som sjekker om et tall x er større enn 10. Hvis det er det, skal det skrives ut "Tallet er større enn 10". //
 
@@ -192,3 +175,191 @@ if (hovedTall > 10) {
 } else if (hovedTall === 10) {
   console.log("Tallene er like");
 }
+
+/* 
+
+Oppgave 2:
+Gitt et tall y. Skriv en kode som sjekker om tallet er positivt, negativt, eller null og skriver ut en passende melding for hver situasjon.
+
+*/ 
+
+var y = 5
+
+if (y > 0) {
+console.log("Tallet er positivt");
+} else if (y < 0) {
+  console.log("Tallet er negativt");
+} else if (y === 0) {
+  console.log("Tallet er 0");
+}
+
+
+
+/*
+
+Oppgave. 4:
+Gitt to tall a og b. Skriv en kode som sjekker om a er større enn 5 OG b er mindre enn 10. Hvis begge betingelsene er sanne, skriv ut "Begge betingelsene er sanne".
+
+*/
+
+
+var a = 4
+var b = 8
+
+if (a > 5 && b < 10) {
+  console.log("Begge betingelsene er sanne");
+} else console.log("Løgn");
+
+
+
+
+/*
+
+Oppgave 5:
+Gitt tre tall: x, y, og z. Skriv en kode som finner det største tallet og skriver det ut.
+
+*/
+
+var x = 55
+var y = 25
+var z = 15
+
+console.log(Math.max(x, y, z));
+
+
+
+
+
+
+/*
+
+Oppgave 6:
+Gitt et tall n. Skriv en kode som sjekker om tallet er enten 5 ELLER 10. Hvis det er det, skriv ut "Tallet er enten 5 eller 10".
+
+*/
+
+
+n = 7
+
+if (n === 5 || n === 10) {
+  console.log("Tallet er enten 5 eller 10");
+} else console.log("Tallet er ikke 5 eller 10");
+
+
+
+
+
+/*
+Oppgave 7:
+Gitt en variabel frukt. Bruk en switch-statement for å skrive ut en melding basert på frukten (for eksempel "Jeg elsker epler" for "eple" og lignende tekster). Legg til en default-case som sier "Jeg vet ikke hvilken frukt det er".
+
+*/
+
+
+
+var fruits = "Appelsin" 
+
+
+
+switch (fruits) {
+case "Appelsin":
+console.log("Oransje")
+break;
+case "Eple":
+console.log("Grønn")
+break;
+case "Banan":
+console.log("Gul")
+}
+
+
+
+
+
+/*
+Oppgave 8:
+Gitt to strenger, str1 og str2. Skriv en kode som sjekker om strengene er like. Hvis de er det, skriv ut "Strengene er like". Ellers, skriv ut "Strengene er ikke like".
+*/
+
+
+
+str1 = "Helt"
+str2 = "Like"
+
+if (str1 === str2) {
+  console.log("Strengene er like");
+} else {
+  console.log("Strengene er ikke like");
+}
+
+
+
+
+
+/*
+
+Oppgave 9 
+
+Gitt en variabel, type. Hvis type er en "farge", bruk en switch-statement på verdi for å skrive ut forskjellige meldinger basert på fargen (for eksempel "Fargen er rød" for "rød"). Hvis type er et "dyr", bruk en switch på verdi for å skrive ut et dyrenavn.
+
+*/
+
+
+
+const type = 1
+
+switch (type) {
+  case 1:
+  console.log("Varm Farge")
+  break;
+  case 2:
+    console.log("Fargen er miljøvennlig")
+    break;
+    case 3:
+      console.log("Fargen til havet")
+      break;
+      default:
+        console.log("No idea brotha")
+}
+
+
+
+/*
+
+Oppgave 10 (Avansert):
+Les deg opp på Date.now() og getDay(). 
+https://www.w3schools.com/jsref/jsref_now.asp
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDay
+Gi en variabel en Date.now-metode. 
+Bruk en switch-statement for å skrive ut navnet på ukedagen. 
+
+*/
+
+const birthday = new Date('November 24, 1990')
+let day = birthday.getDay();
+
+
+switch (birthday.getDay()) {
+  case 0:
+    console.log("Søndag")
+    break;
+    case 1:
+      console.log("Mandag")
+      break;
+      case 2:
+        console.log("Tirsdag")
+        break;
+        case 3:
+          console.log("Onsdag");
+          break;
+          case 4:
+            console.log("Torsdag")
+            break;
+            case 5:
+              console.log("Fredag")
+              break;
+              case 6:
+                console.log("Lørdag")
+}
+
+
